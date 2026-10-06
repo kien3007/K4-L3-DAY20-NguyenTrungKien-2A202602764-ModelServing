@@ -6,6 +6,7 @@
 # Afterwards, use .\lab.ps1 <target> for every step docs/GUIDE.md writes as `make <target>`.
 $ErrorActionPreference = 'Stop'
 Set-Location (Join-Path $PSScriptRoot '..\..')
+$env:PYTHONUTF8 = '1'
 
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
     Write-Host "ERROR: Python not found. Install 3.10+ from https://www.python.org/downloads/" -ForegroundColor Red
